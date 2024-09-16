@@ -30,9 +30,9 @@ $(function() {
                     if (response.success && response.data !== null) {
                         let data = response.data;
                         $('#nida_response').html(`
-                            <div class="card border-primary border">
+                            <div class="card border-success border border-2">
                             <div class="card-body text-start">
-                            <h5 class="card-title text-primary"> ${response.message}</h5>
+                            <h6 class="card-title text-success"> ${response.message}</h6>
                             <p><strong>First Name:</strong> ${data.FIRSTNAME}</p>
                             <p><strong>Middle Name:</strong> ${data.MIDDLENAME}</p>
                             <p><strong>Last Name:</strong> ${data.SURNAME}</p>
