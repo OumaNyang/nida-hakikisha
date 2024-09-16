@@ -1,5 +1,6 @@
 <?php
-
+error_reporting(E_ALL);
+ini_set('display_errors', 0);
 class Nida {
     private $BASE_URL = "https://ors.brela.go.tz/um/load/load_nida/%s";
 
@@ -58,9 +59,11 @@ class Nida {
             $userData = $this->loadUserInformation($nationalId);
             if (!$json) {
                 $userData = $this->preprocessUserData($userData);
-                return  json_encode(["success"=>true,"Message"=>"NIN Details found","data"=>$userData]);
+                return  json_encode(["success"=>false,"message"=>" Request not  successfull","data"=>$userData]);
+            }else{
+                return  json_encode(["success"=>true,"message"=>"Lookup Request Successfull","data"=>$userData]);
+
             }
-            return  json_encode(["success"=>false,"Message"=>"NIN Details not found","data"=>[]]);
         } catch (Exception $e) {
 
             return json_encode(["success"=>false,"Message"=>"Fetch error Occured. ". $e->getMessage(),"data"=>[]]);
@@ -109,10 +112,11 @@ class Nida {
         }
     }
 }
+// 19820801 12102 00005 11
 // 19620222416010
 // 19841121332060000128
 // $nida = new Nida();
-// $userData = $nida->loadUser("19620222416010", true);  // Replace with a valid national ID
+// $userData = $nida->loadUser("19820801121020000510", true);  // Replace with a valid national ID
 // echo ($userData); 
 ?>
 

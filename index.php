@@ -31,10 +31,9 @@
         <div class="card-footer"></div>
     </div>    
     
-    <div class="d-block mt-4 py-4">
+    <div class="d-block mt-4 py-4 text-center">
          <div id="nida_response"></div>
-   
-    </div>
+       </div>
 
 
 </div>
