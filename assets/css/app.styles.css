@@ -1,0 +1,17 @@
+@font-face {
+    font-family: 'San-Francisco';  
+    src: url('./fonts/San-Francisco/San Francisco/otf/SFNSText-Regular.otf') format('opentype'), 
+         url('./font/San-Francisco/San Francisco/otf/SFNSDisplay-Black.otf') format('opentype'); 
+    font-weight: normal;
+    font-style: normal; 
+  }
+  body {
+    font-family: "San-Francisco", sans-serif;
+    background: linear-gradient(to right, rgba(255, 250, 250, 0.7), rgba(123, 200, 254, 0.8)), 
+                url('../images/tz-flag-logo6789.jpg') no-repeat center center;
+    background-size: cover;
+    background-attachment: fixed;
+  }
+  p{
+      font-size: .9em;
+  }
