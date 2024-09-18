@@ -1,0 +1,31 @@
+{
+  "name": "nida",
+  "version": "1.0.0",
+  "main": "index.html",
+  "scripts": {
+    "minify": "terser assets/js/app.amplifier.js -o assets/js/app.amplifier.min.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch": "npm-watch"
+  },
+  "watch": {
+    "minify": {
+      "patterns": [
+        "app.amplifier.js"
+      ],
+      "extensions": "js"
+    }
+  },
+  "keywords": [],
+  "author": "Ouma Nyang",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "gulp": "^5.0.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-rename": "^2.0.0",
+    "gulp-terser": "^2.1.0",
+    "gulp-uglify": "^3.0.2",
+    "npm-watch": "^0.13.0",
+    "terser": "^5.33.0"
+  }
+}
